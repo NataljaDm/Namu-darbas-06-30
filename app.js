@@ -58,8 +58,49 @@ console.log(biggestNum);
 
 console.log('----------------------7---------------------');
 //7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
+const masyvas2 = [];
+let raideA = 0;
+let raideB = 0;
+let raideC = 0;
+let raideD = 0;
+
+for (let i = 0; i < 100; i++) {
+    masyvas2.push(Math.floor(Math.random() * 4));
+   
+}
+
+for (let k = 0; k < masyvas2.length; k++) {
+    if (masyvas2[k] === 0) {
+        masyvas2[k] = 'A'
+        raideA++
+    } else if (masyvas2[k] === 1) {
+        masyvas2[k] = 'B';
+        raideB++;
+    } else if (masyvas2[k] === 2) {
+        masyvas2[k] = 'C';
+        raideC++;
+    } else if (masyvas2[k] === 3) {
+        masyvas2[k] = 'D';
+        raideD++;
+}
+}
+console.log(`A: ${raideA}, B: ${raideB}, C: ${raideC}, D: ${raideD}`);
 
 
+
+
+/*const array = [];
+
+let q = 0;
+let w = 0;
+let c = 0;
+let d = 0;
+
+for (let l = 0; l < 100; l++) {
+    array.push(Math.floor(Math.random() * 100));
+   
+}
+console.log(array)*/
 console.log('----------------------8---------------------');
 //8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas). Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 
