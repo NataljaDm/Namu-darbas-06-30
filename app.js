@@ -2,16 +2,18 @@
 
 console.log('----------------------1---------------------');
 //1. Palyginti du skaičius a ir b. Išvesti į konsolę, kuris didesnis arba jie lygūs. (4 taškai)
+const a = 6;
+const b = 9;
 
 
 
 console.log('----------------------2---------------------');
 //2. Naudojant for ciklą, išvesti į konsolę skaičius nuo 1 iki 10. (5 taškai)
 
-
-for (let a = 0; a <= 10; a++) {
-     console.log(a);
+for (let d = 1; d <= 10; d++) {
+     console.log(d);
 }
+
 console.log('----------------------3---------------------');
 //3. Naudojant for ciklą, išvesti į konsolę skaičius nuo 0, 2, 4, 6, 8, 10. (5 taškai)
 
@@ -19,40 +21,23 @@ for (let x = 0; x <= 10; x +=2) {
      console.log(x);
 }
 
-
 console.log('----------------------4---------------------');
 //4. Naudojant for ciklą, sugeneruoti penkis atsitiktinius skaičius nuo 1 iki 10. Išvesti juos konsolėje. (5 taškai)
 
-let list = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10];
-
-const final1 = [];
-
-
-for (const q of list) {
-    if (Math.floor(Math.random() * 3)) {
-        final1.push(q);
-    } 
+for (let s = 1; s <= 5; s ++) {
+    const number = Math.floor((Math.random()*10))
+    console.log(number)
 }
-
-console.log(final1);
-
-
-
-/*for (let c = 1; c <= 10; c++) {
-  
-}
-console.log(c = Math.floor(Math.random()));*/
 
 console.log('----------------------5---------------------');
 //5. Naudojant while ciklą, spausdinti atsitiktinius skaičius nuo 1 iki 10. Paskutinis atspausdintas skaičius turi būti 5. (7 taškai)
-let b = 1;
-while (b <= 10) {
-   console.log(b = Math.floor(Math.random() * 10) + 1);
-   if (b === 5) {
+let f = 1;
+while (f <= 10) {
+   console.log(f = Math.floor(Math.random() * 10) +1);
+   if (f === 5) {
        break;
    }
 }
-
 
 console.log('----------------------6---------------------');
 //6. Sukurti masyvą, kurio ilgis būtų nuo 20 iki 30, o reikšmės būtų skaičiai nuo 10 iki 30. Surasti didžiausią masyvo reikšmę, NENAUDOJANT sort() bei Math.max() funkcijų. (7 taškai)
