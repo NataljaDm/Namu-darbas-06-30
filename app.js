@@ -86,27 +86,26 @@ for (let k = 0; k < masyvas2.length; k++) {
 }
 console.log(`A: ${raideA}, B: ${raideB}, C: ${raideC}, D: ${raideD}`);
 
-
-
-
-/*const array = [];
-
-let q = 0;
-let w = 0;
-let c = 0;
-let d = 0;
-
-for (let l = 0; l < 100; l++) {
-    array.push(Math.floor(Math.random() * 100));
-   
-}
-console.log(array)*/
 console.log('----------------------8---------------------');
 //8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas). Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
 
 
 console.log('----------------------9---------------------');
 //9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
+function pirminisSkaicius(u) {
+    if (typeof u !== 'number') {
+        return 'Ne skaicius'
+    } 
+    if (u % 2 === 0 && u > 2) {
+        return `${u} ne pirminis skaicius`
+    } else if (u % 3 === 0 && u > 3){
+        return `${u} ne pirminis skaicius`
+    } else if (u % u === 0 && u % 1 === 0) {
+            return `${u} pirminis skaicius`
+    }
+}
 
+console.log(pirminisSkaicius(58));
 console.log('----------------------10---------------------');
 //10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX". (10 taškų)
+
