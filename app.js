@@ -109,3 +109,15 @@ console.log(pirminisSkaicius(58));
 console.log('----------------------10---------------------');
 //10. Parašyti funkciją telefonoNumeris. Funkcija turi priimti vieną kintamąjį - masyvą. Masyvo elementai - skaičiai, ilgis. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX". (10 taškų)
 
+function telefonoNumeris(num) {
+    let tel = ` `;
+    for (let g = 0; g < num.length; g++) {
+        if (typeof num[g] !== 'number' || !isFinite(num[g])) {
+            return `ERROR`
+        } else {
+            tel += num[g];
+        }
+    }
+    return telNumeris = `(${tel[0]}${tel[1]}${tel[2]}) ${tel[3]}${tel[4]}${tel[5]}-${tel[6]}${tel[7]}${tel[8]}${tel[9]}`;
+}
+console.log(telefonoNumeris([8632598741]));
