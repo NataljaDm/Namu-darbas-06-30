@@ -2,9 +2,14 @@
 
 console.log('----------------------1---------------------');
 //1. Palyginti du skaičius a ir b. Išvesti į konsolę, kuris didesnis arba jie lygūs. (4 taškai)
-const a = 6;
-const b = 9;
 
+function skaiciai (a ,b ) {
+    if (a > b){
+        return a 
+    } else 
+        return b
+ }
+ console.log(skaiciai(45, 65));
 
 
 console.log('----------------------2---------------------');
