@@ -1,5 +1,3 @@
-
-
 console.log('----------------------1---------------------');
 //1. Palyginti du skaičius a ir b. Išvesti į konsolę, kuris didesnis arba jie lygūs. (4 taškai)
 
@@ -12,7 +10,6 @@ function skaiciai (a ,b ) {
         return b
  }
  console.log(skaiciai(45, 65));
-
 
 console.log('----------------------2---------------------');
 //2. Naudojant for ciklą, išvesti į konsolę skaičius nuo 1 iki 10. (5 taškai)
@@ -38,6 +35,7 @@ for (let s = 1; s <= 5; s ++) {
 
 console.log('----------------------5---------------------');
 //5. Naudojant while ciklą, spausdinti atsitiktinius skaičius nuo 1 iki 10. Paskutinis atspausdintas skaičius turi būti 5. (7 taškai)
+
 let f = 1;
 while (f <= 10) {
    console.log(f = Math.floor(Math.random() * 10) +1);
@@ -48,13 +46,12 @@ while (f <= 10) {
 
 console.log('----------------------6---------------------');
 //6. Sukurti masyvą, kurio ilgis būtų nuo 20 iki 30, o reikšmės būtų skaičiai nuo 10 iki 30. Surasti didžiausią masyvo reikšmę, NENAUDOJANT sort() bei Math.max() funkcijų. (7 taškai)
-const masyvas = [];
 
+const masyvas = [];
 for (let m = 20; m < 30; m++) {
 masyvas.push(Math.floor(Math.random() * 20) + 10)
 }
 console.log(masyvas)
-
 let biggestNum = masyvas[0];
      for (let d = 0; d < masyvas.length; d++) {
          if (masyvas[d] > biggestNum) {
@@ -65,6 +62,7 @@ console.log(biggestNum);
 
 console.log('----------------------7---------------------');
 //7. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 100. Suskaičiuokite kiek yra kiekvienos raidės. (7 taškai)
+
 const masyvas2 = [];
 let raideA = 0;
 let raideB = 0;
@@ -73,7 +71,6 @@ let raideD = 0;
 
 for (let i = 0; i < 100; i++) {
     masyvas2.push(Math.floor(Math.random() * 4));
-   
 }
 
 for (let k = 0; k < masyvas2.length; k++) {
@@ -95,13 +92,37 @@ console.log(`A: ${raideA}, B: ${raideB}, C: ${raideC}, D: ${raideD}`);
 
 console.log('----------------------8---------------------');
 //8. Parašyti funkciją - lygineSuma. Funkcijos parametrai - du kintamieji. Testų reikalavimai - abu kitamieji turi būti arba skaičiai arba masyvai(negali būti vienas skaičius, kitas masyvas). Jei kintamieji skaičiai, grąžinti skaičių sumą, jei kintamieji masyvai - grąžinti masyvų ilgių sumą. Jei abu kintamieji skaičiai arba masyvai, bet suma nelyginė - grąžinti tekstą, kad suma nelyginė. (10 taškų)
-function lygineSuma ( numer1, numer2){
-    let summa = 0;
 
+function lygineSuma ( numer1, numer2){
+     if (typeof numer1 === `number` && typeof numer2 === `number`) {
+         let summa = numer1 + numer2;
+             if(summa % 2 === 0) {
+                 return `Suma - ` + summa;
+             } else {
+                 return `Nelygine suma`;
+             }
+           
+     } if (typeof numer1 === `object` && typeof numer2 === `object`) {
+         let arrSum  = numer1.length + numer2.length;
+            if(arrSum % 2 === 0) {
+                return `Masyvo ilgis - ` + arrSum;
+             } else {
+                return `Nelygine suma`;
+            }
+      } else {
+         return `ERROR`
+      }
 }
+console.log(lygineSuma(12, 74));
+console.log(lygineSuma(56, 123));
+console.log(lygineSuma([9,5,2,], [8,5,2,1,4]));
+console.log(lygineSuma([9,6,3,2,5,8,0], [7,4,1,0]));
+console.log(lygineSuma([8], 23));
+console.log(lygineSuma(`VNBM`, `LNJK`));
 
 console.log('----------------------9---------------------');
 //9. Parašyti funkciją pirminisSkaicius. Funkcija turi vieną kintamąjį. Turi būti patikrinimas, kad kintamasis yra skaičius. Funkcija turi grąžinti ar pateiktas skaičius yra pirminis( pirminis skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.) (10 taškų)
+
 function pirminisSkaicius(u) {
     if (typeof u !== 'number') {
         return 'Ne skaicius'
